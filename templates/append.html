@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Cake</title>
+    <title>Add Sushi</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff4e50 0%, #1a1a1a 100%);
             margin: 0;
             min-height: 100vh;
             display: flex;
@@ -23,7 +23,7 @@
             background: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             position: relative;
             overflow: hidden;
         }
@@ -35,15 +35,15 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background: linear-gradient(90deg, #ff4e50, #fc913a, #f9d423);
         }
 
         h2 {
             text-align: center;
             margin-bottom: 30px;
-            color: #333;
+            color: #222;
             font-size: 28px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .form-group {
@@ -53,7 +53,7 @@
         label {
             display: block;
             margin-bottom: 8px;
-            color: #555;
+            color: #444;
             font-weight: 500;
             font-size: 14px;
         }
@@ -64,56 +64,37 @@
             border: 2px solid #e1e5e9;
             border-radius: 10px;
             font-size: 16px;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             box-sizing: border-box;
         }
 
         input:focus, select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        input[type="number"] {
-            -moz-appearance: textfield;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+            border-color: #ff4e50;
+            box-shadow: 0 0 0 3px rgba(255, 78, 80, 0.1);
         }
 
         select {
             cursor: pointer;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-size: 16px;
-            padding-right: 45px;
         }
 
         button {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff4e50 0%, #fc913a 100%);
             color: white;
             border: none;
             border-radius: 10px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             margin-top: 10px;
         }
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        button:active {
-            transform: translateY(0);
+            box-shadow: 0 10px 20px rgba(255, 78, 80, 0.3);
         }
 
         .back-link {
@@ -121,13 +102,12 @@
             text-align: center;
             margin-top: 20px;
             text-decoration: none;
-            color: #667eea;
+            color: #ff4e50;
             font-weight: 500;
-            transition: color 0.3s ease;
         }
 
         .back-link:hover {
-            color: #764ba2;
+            color: #fc913a;
         }
     </style>
 </head>
@@ -135,12 +115,12 @@
 
 <div class="container">
     <div class="box">
-        <h2>➕ Add New Cake</h2>
+        <h2>🍣 Add New Sushi</h2>
 
         <form method="POST">
             <div class="form-group">
-                <label for="name">🍰 Cake Name</label>
-                <input id="name" name="name" placeholder="Enter cake name" required>
+                <label for="name">🍣 Sushi Name</label>
+                <input id="name" name="name" placeholder="Enter sushi name" required>
             </div>
 
             <div class="form-group">
@@ -149,8 +129,8 @@
             </div>
 
             <div class="form-group">
-                <label for="image">🖼️ Image URL</label>
-                <input id="image" name="image" placeholder="https://example.com/image.jpg">
+                <label for="image">🖼️ Sushi Image URL</label>
+                <input id="image" name="image" placeholder="https://example.com/sushi.jpg">
             </div>
 
             <div class="form-group">
@@ -159,7 +139,7 @@
             </div>
 
             <div class="form-group">
-                <label for="category_id">🏷️ Category</label>
+                <label for="category_id">🏷️ Sushi Category</label>
                 <select id="category_id" name="category_id">
                     <option value="">Select Category</option>
                     {% for category in categories %}
@@ -168,7 +148,7 @@
                 </select>
             </div>
 
-            <button type="submit">✅ Add Cake</button>
+            <button type="submit">✅ Add Sushi</button>
         </form>
 
         <a href="/" class="back-link">⬅️ Back to Menu</a>
